@@ -30,7 +30,8 @@ class _SettingsFormState extends State<SettingsForm> {
             UserData userData = snapshot.data;
             return Form(
                 key: _formKey,
-                child: Column(children: <Widget>[
+                child: SingleChildScrollView(
+                    child: Column(children: <Widget>[
                   Text(
                     'Update your brew settings.',
                     style: TextStyle(fontSize: 18.0),
@@ -84,7 +85,7 @@ class _SettingsFormState extends State<SettingsForm> {
                           Navigator.pop(context);
                         }
                       })
-                ]));
+                ])));
           } else {
             return Loading();
           }
